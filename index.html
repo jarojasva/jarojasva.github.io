@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jorge Alexander Rojas Vargas — Bioinformatics & Microbiomes</title>
+  <meta name="description" content="Personal website of Jorge Alexander Rojas Vargas: bioinformatics, microbiomes, genomics, and data science." />
+    <style>
+    :root{
+      --bg: #ffffff; --text:#0f172a; --muted:#475569; --link:#2563eb; --b:#e2e8f0; --card:#f8fafc;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b1220; --text:#e5e7eb; --muted:#94a3b8; --link:#93c5fd; --b:#1f2937; --card:#0f172a; }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; background:var(--bg); color:var(--text);}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{display:grid; grid-template-columns: 280px 1fr; gap:2rem; max-width:1200px; margin:0 auto; padding:2rem 1.25rem}
+    aside{position:sticky; top:1rem; align-self:start; border:1px solid var(--b); border-radius:14px; padding:1.25rem; background:var(--card)}
+    .brand{display:flex; align-items:center; gap:12px; margin-bottom:1rem}
+    .brand img{width:56px; height:56px; border-radius:50%; object-fit:cover; border:1px solid var(--b)}
+    .brand h1{font-size:1.1rem; line-height:1.2; margin:0}
+    nav ul{list-style:none; padding:0; margin:0 0 1rem 0}
+    nav li{margin: .35rem 0}
+    .subtle{color:var(--muted); font-size:.92rem}
+    .chipbar{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem}
+    .chip{border:1px solid var(--b); background:transparent; padding:.25rem .5rem; border-radius:999px; font-size:.8rem}
+    .social, .links{margin-top:1rem}
+    .social a, .links a{display:block; padding:.25rem 0}
+
+    main{min-width:0}
+    .hero{border:1px solid var(--b); border-radius:14px; background:var(--card); padding:1.25rem; display:grid; grid-template-columns:120px 1fr; gap:1rem; align-items:center}
+    .hero img{width:120px; height:120px; border-radius:12px; object-fit:cover; border:1px solid var(--b)}
+    .hero h2{margin:.2rem 0 0 0; font-size:1.6rem}
+    .hero p{margin:.35rem 0 0 0}
+    .btns{margin-top:.75rem; display:flex; flex-wrap:wrap; gap:.5rem}
+    .btn{display:inline-block; border:1px solid var(--b); background:transparent; padding:.5rem .75rem; border-radius:10px; font-weight:500}
+
+    section{margin-top:1.75rem; border:1px solid var(--b); border-radius:14px; padding:1.25rem; background:var(--card)}
+    section h3{margin:.2rem 0 1rem 0; font-size:1.25rem}
+    ul{padding-left:1.25rem}
+    .twocol{display:grid; grid-template-columns: 1fr 1fr; gap:1rem}
+
+    .timeline{list-style:none; padding:0; margin:0}
+    .timeline li{padding:.5rem 0; border-left:3px solid var(--b); margin-left:.75rem; padding-left:.75rem}
+    .tag{font-size:.8rem; color:var(--muted)}
+
+    footer{max-width:1200px; margin:2rem auto; padding:0 1.25rem 2rem; color:var(--muted); font-size:.9rem}
+
+    @media (max-width: 900px){
+      .wrap{grid-template-columns:1fr}
+      aside{position:static}
+      .hero{grid-template-columns:80px 1fr}
+      .hero img{width:80px; height:80px}
+      .twocol{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside>
+      <div class="brand">
+        <!-- Reemplaza src por tu foto en /assets/foto.jpg -->
+        <img src="assets/foto.jpg" alt="Foto de Jorge" />
+        <h1>Jorge A. Rojas<br><span class="subtle">Bioinformatics & Microbiomes</span></h1>
+      </div>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#interests">Research Interests</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social" aria-label="Social">
+        <div class="subtle">Social</div>
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://github.com/jarojasva" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://bsky.app/" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter/X</a>
+      </div>
+      <div class="links" aria-label="Links">
+        <div class="subtle">Links</div>
+        <a href="docs/CV_Jorge_Rojas.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        <a href="mailto:jorge@example.com">jorge@example.com</a>
+      </div>
+      <div class="chipbar" aria-label="Tags">
+        <span class="chip">Metagenomics</span>
+        <span class="chip">K‑mers</span>
+        <span class="chip">Microbiome</span>
+        <span class="chip">Biostatistics</span>
+      </div>
+    </aside>
+
+    <main>
+      <section class="hero" id="home">
+        <img src="assets/foto.jpg" alt="Foto de Jorge" />
+        <div>
+          <h2>Jorge Alexander Rojas Vargas</h2>
+          <p class="subtle">Postdoctoral Associate, University of Western Ontario · Department of Biology</p>
+          <div class="btns">
+            <a class="btn" href="mailto:jorge@example.com">✉️ Contacto</a>
+            <a class="btn" href="docs/CV_Jorge_Rojas.pdf" target="_blank" rel="noopener">📄 CV</a>
+            <a class="btn" href="https://scholar.google.com/" target="_blank" rel="noopener">🔎 Google Scholar</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h3>About</h3>
+        <p>
+          I work at the intersection of bioinformatics, genomics, and microbial ecology. I develop
+          and apply reproducible workflows to analyze microbial communities (16S and shotgun metagenomics),
+          with a focus on <em>k‑mers</em>, microbial “dark matter”, and HPC‑ready, reproducible pipelines.
+        </p>
+      </section>
+
+      <section id="interests">
+        <h3>Research Interests</h3>
+        <ul>
+          <li>Pangenomics and microbial functions</li>
+          <li>Large‑scale orthology analysis and phylogenetic inference</li>
+          <li>k‑mer‑based methods and distance metrics</li>
+          <li>Human and environmental microbiomes</li>
+        </ul>
+      </section>
+
+      <section id="research">
+        <h3>Research</h3>
+        <div class="twocol">
+          <div>
+            <h4>Kmerbiome & distance metrics</h4>
+            <p class="subtle">2023–present</p>
+            <p>Development of pipelines to compare k‑mer profiles (CLR/ALR/ILR, cosine, Wasserstein, UMAP) and evaluate taxonomic/functional stability.</p>
+          </div>
+          <div>
+            <h4>Microbiome and sexual health</h4>
+            <p class="subtle">2022–present</p>
+            <p>Links between reproductive maturation, sexual debut, the microbiome, and immune activation; GEE and DMM models; immune markers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h3>Selected Publications</h3>
+        <ul>
+          <li><strong>Rojas‑Vargas J.A.</strong>, et al. (2025). <em>Article title</em>. Journal. <span class="tag">microbiome, metagenomics</span></li>
+          <li>Surname A., <strong>Rojas‑Vargas J.A.</strong> (2024). <em>Another paper</em>. Journal. <span class="tag">k‑mers</span></li>
+        </ul>
+        <p class="subtle">For the full list, see Google Scholar.</p>
+      </section>
+
+      <section id="teaching">
+        <h3>Teaching</h3>
+        <ul>
+          <li>Applied Bioinformatics — R/Python, HPC, and reproducibility workshops.</li>
+          <li>Comparative Genomics — theory and practice of pangenomics, orthology, and phylogenies.</li>
+        </ul>
+      </section>
+
+      <section id="news">
+        <h3>News</h3>
+        <ul>
+          <li><strong>Sep 2025:</strong> Launch of this website on GitHub Pages 🎉</li>
+          <li><strong>May 2025:</strong> Talk at IHMT Lisbon on k‑mers and functional stability.</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h3>Contact</h3>
+        <p>Email me at <a href="mailto:jorge@example.com">jorge@example.com</a> or via <a href="https://github.com/jarojasva" target="_blank" rel="noopener">GitHub</a>.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    © <span id="y"></span> Jorge Alexander Rojas Vargas · Built with HTML/CSS and GitHub Pages
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>

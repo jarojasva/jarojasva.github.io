@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Art — Jorge Alexander Rojas Vargas</title>
+  <meta name="description" content="Oil paintings by Jorge Alexander Rojas Vargas — personal gallery." />
+  <link rel="icon" href="assets/favicon_jr.ico?v=1" sizes="any">
+  <style>
+    :root{ --bg:#ffffff; --text:#0f172a; --muted:#475569; --b:#e2e8f0; --card:#f8fafc; --link:#2563eb; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0b1220; --text:#e5e7eb; --muted:#94a3b8; --b:#1f2937; --card:#0f172a; --link:#93c5fd; } }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; background:var(--bg); color:var(--text)}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:1200px; margin:0 auto; padding:2rem 1.25rem}
+
+    header{display:flex; flex-wrap:wrap; gap:1rem; align-items:baseline; justify-content:space-between; margin-bottom:1rem}
+    .title{font-weight:700; font-size:1.5rem}
+    .nav a{margin-right:1rem}
+    .intro{border:1px solid var(--b); background:var(--card); border-radius:14px; padding:1rem; color:var(--muted);}
+
+    .gallery{display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:12px; margin-top:1rem}
+    .card{position:relative; display:block; aspect-ratio:4/3; border:1px solid var(--b); border-radius:12px; overflow:hidden; background:#000}
+    .card img{width:100%; height:100%; object-fit:cover; display:block}
+    .cap{position:absolute; inset:auto 0 0 0; padding:.5rem .6rem; font-size:.9rem; color:#fff; background:linear-gradient(transparent, rgba(0,0,0,.55));}
+
+    /* Lightbox via :target */
+    .lightbox{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.9); z-index:9999; padding:2rem}
+    .lightbox:target{display:flex}
+    .lightbox img{max-width:min(92vw,1400px); max-height:86vh; border-radius:12px;}
+    .close{position:fixed; top:18px; right:22px; font-size:2rem; color:#fff; text-decoration:none}
+    .caption{position:fixed; left:0; right:0; bottom:0; color:#e5e7eb; padding:1rem; text-align:center; font-size:1rem;}
+
+    footer{color:var(--muted); font-size:.9rem; margin-top:1.5rem}
+  </style>
+</head>
+<body>
+  <!--
+    How to add your paintings:
+    1) Upload your images to assets/art/ (e.g., painting1.jpg, painting2.jpg, ...)
+    2) Duplicate one of the sample <a class="card"> blocks below and update src, alt, and the caption text.
+    3) For each image also create a matching lightbox <div id="..." class="lightbox"> further down.
+    Tip: keep filenames simple (no spaces). Recommended long side ≥1500px.
+  -->
+  <div class="wrap">
+    <header>
+      <div class="title">Art — Oil Paintings</div>
+      <nav class="nav" aria-label="Navigation">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="window.scrollTo({top: document.body.scrollHeight, behavior:'smooth'}); return false;">Contact</a>
+      </nav>
+    </header>
+
+    <div class="intro">
+      <strong>About this gallery.</strong> A small selection of my oil paintings. Click any image to view it large. If you want this page linked from your homepage, add <code>&lt;li&gt;&lt;a href="art.html"&gt;Art&lt;/a&gt;&lt;/li&gt;</code> to the sidebar menu in <code>index.html</code>.
+    </div>
+
+    <section class="gallery" aria-label="Gallery">
+      <!-- SAMPLE CARDS — duplicate and edit -->
+      <!-- Card 1 -->
+      <!--
+      <a class="card" href="#p1">
+        <img src="assets/art/painting1.jpg" alt="Sunset over bay — oil on canvas" />
+        <span class="cap">Sunset over bay (2024)</span>
+      </a>
+      -->
+      <!-- Card 2 -->
+      <!--
+      <a class="card" href="#p2">
+        <img src="assets/art/painting2.jpg" alt="Still life with citrus — oil on canvas" />
+        <span class="cap">Still life with citrus (2023)</span>
+      </a>
+      -->
+      <!-- Add more cards here -->
+    </section>
+
+    <!-- LIGHTBOXES — create one per image -->
+    <!--
+    <div class="lightbox" id="p1">
+      <a class="close" href="#">×</a>
+      <img src="assets/art/painting1.jpg" alt="Sunset over bay — oil on canvas" />
+      <div class="caption">Sunset over bay (2024) — oil on canvas, 40×50 cm</div>
+    </div>
+
+    <div class="lightbox" id="p2">
+      <a class="close" href="#">×</a>
+      <img src="assets/art/painting2.jpg" alt="Still life with citrus — oil on canvas" />
+      <div class="caption">Still life with citrus (2023) — oil on canvas, 30×40 cm</div>
+    </div>
+    -->
+
+    <footer>
+      Tip: store your images in <code>assets/art/</code> and keep file sizes under ~1–2 MB for faster loads. You can always update this page without touching your homepage.
+    </footer>
+  </div>
+</body>
+</html>
